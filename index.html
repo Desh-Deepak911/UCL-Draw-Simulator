@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>UCL Draw Simulator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
     <h2>UCL Draw</h2>
-    <table>
+    <table id="diffGroups">
         <tr>
             <th>Group 1</th>
             <th>Group 2</th>
         </tr>
         <tr>
-            <td>PSV</td>
-            <td>Bayern</td>
+            <td id="g1">PSV</td>
+            <td id="g2">Bayern</td>
         </tr>
         <tr>
-            <td>City</td>
-            <td>Real</td>
+            <td id="g3">City</td>
+            <td id="g4">Real</td>
+        </tr>
+    </table>
+    <table id="finals">
+        <tr>
+            <th>1st Side</th>
+            <th>2nd Side</th>
+        </tr>
+        <tr>
+            <td id="s1"></td>
+            <td id="s2"></td>
+        </tr>
+        <tr>
+            <td id="s3"></td>
+            <td id="s4"></td>
         </tr>
     </table>
     <div>
-        <tr>
-            <td>
-                <img src="ball.jpg" alt="ball" style="height: 20px; width: 20px;">
-            </td>
-            <td>
-                <img src="ball.jpg" alt="ball" style="height: 20px; width: 20px;">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="ball.jpg" alt="ball" style="height: 20px; width: 20px;">
-            </td>
-            <td>
-                <img src="ball.jpg" alt="ball" style="height: 20px; width: 20px;">
-            </td>
-        </tr>
+        <table>
+            <tr>
+                <td id="11" onClick="changeColour()">
+                    <img src="ball.jpg" alt="ball" style="height: 20px; width: 20px;">
+                </td>
+                <td>
+                    <img src="ball.jpg" alt="ball" id="12" style="height: 20px; width: 20px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="ball.jpg" alt="ball" id="21" style="height: 20px; width: 20px;">
+                </td>
+                <td>
+                    <img src="ball.jpg" alt="ball" id="22" style="height: 20px; width: 20px;">
+                </td>
+            </tr>
+        </table>
     </div>
     <button id="Btn" onClick="changeColour()">Submit</button>
 </body>
